@@ -10,7 +10,7 @@ public class MenuItem {
     private final LocalDate lastUpdate;
 
     public MenuItem(LocalDate lastUpdate, String category, String description, double price, String item) {
-        this.lastUpdate = lastUpdate;
+        this.lastUpdate = LocalDate.now();
         this.category = category;
         this.description = description;
         this.price = price;
