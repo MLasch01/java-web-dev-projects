@@ -54,4 +54,19 @@ public class MenuItem {
         return lastUpdate;
     }
 
+    @Override
+    public String toString() {
+        String newText = isNew() ? " - NEW!" : "";
+        return item + newText + "\n" +
+                description +
+                " | $" + price;
+    }
+
+
+    boolean isNew() {
+        LocalDate today = LocalDate.now();
+        double daysSinceAdded = getLastUpdate().until(today, ChronoUnit.DAYS);
+        return daysSinceAdded < 90;
+    }
+
 }
