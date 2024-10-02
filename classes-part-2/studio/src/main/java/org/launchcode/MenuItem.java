@@ -1,12 +1,14 @@
 package org.launchcode;
 
 public class MenuItem {
+    private String item;
     private double price;
     private String description;
     private String category;
     private boolean isNew;
 
-    public MenuItem(double p, String d, String c, boolean iN) {
+    public MenuItem(String i, double p, String d, String c, boolean iN) {
+        this.item = i;
         this.price = p;
         this.description = d;
         this.category = c;
